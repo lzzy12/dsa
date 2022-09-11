@@ -3,7 +3,6 @@
 #include <time.h>
 #ifndef COMMON_H
 #define COMMON_H
-#endif
 typedef struct SingleLL{
     int data;
     struct SingleLL *next;
@@ -282,3 +281,4 @@ SingleLL* createSingleLLFromArray(int arr[], int n){
     }
     return head;
 }
+#endif

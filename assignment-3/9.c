@@ -2,27 +2,24 @@
 #include <stdio.h>
 
 SingleLL* rotateRight(SingleLL* head, int k) {
-        if (head == NULL || head->next == NULL)
+        if (head == NULL || head->next == NULL || k == 0)
             return head;
-        SingleLL *ptr = head;
-        int size = 0;
-        while(ptr){
+        SingleLL *tail = head;
+        int size = 1;
+        while(tail->next){
             size++;
-            ptr = ptr->next;
+            tail = tail->next;
         }
         k = k % size;
-        while(k--){
-            SingleLL *prev = NULL, *ptr = head;
-            while(ptr->next){
-                prev = ptr;
-                ptr = ptr->next;
-            }
-            ptr->next = head;
-            prev->next = NULL;
-            head = ptr;
+        SingleLL *ptr = head;
+        for (int i = 1; i < size - k; i++){
+            ptr = ptr->next;
         }
+        tail->next = head;
+        head = ptr->next;
+        ptr->next = NULL;
         return head;
-    }
+}
 int main(){
     SingleLL *head;
     createLL(&head, 10);
