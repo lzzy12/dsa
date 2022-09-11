@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-
+#ifndef COMMON_H
+#define COMMON_H
+#endif
 typedef struct SingleLL{
     int data;
     struct SingleLL *next;
@@ -11,6 +13,7 @@ typedef struct DoubleLL{
     struct DoubleLL *next;
     struct DoubleLL *prev;
 } DoubleLL;
+
 void initApi(){
     srand((unsigned int)time(NULL));
 }

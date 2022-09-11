@@ -1,6 +1,4 @@
 #include "COMMON.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 void arrangeOddEven(SingleLL **head){
     if (*head == NULL)

@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "common.h"
+#include "COMMON.h"
 
 void displayReverseLL(SingleLL *head){
     SingleLL *ptr = head;
