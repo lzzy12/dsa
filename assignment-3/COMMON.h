@@ -235,7 +235,7 @@ void deleteSingularCircularList(SingleLL **head, int pos){
 void displaySingularCircularList(SingleLL *head){
     if (head == NULL)
         printf("\nNo elements in the list\n");
-    printf("Singular Circular Linked List: ");
+    // printf("Singular Circular Linked List: ");
     SingleLL *ptr = head;
     do{
         printf("%d ,", ptr->data);
